@@ -1,0 +1,151 @@
+==================================
+
+Gal Arnon
+
+How to be convinced by a conversation while barely listening (even to yourself)	
+
+The celebrated PCP Theorem states that any language in NP can be decided via a verifier that reads O(1) bits from a polynomially long proof. Interactive oracle proofs (IOP), a generalization of PCPs, allow the verifier to interact with the prover for multiple rounds while reading a small number of bits from each prover message. While PCPs are relatively well understood, the power captured by IOPs (beyond NP) has yet to be fully explored.
+
+We present a generalization of the PCP theorem for interactive languages. We show that any language decidable by a k-round IP has a k-round public-coin IOP, where the verifier makes its decision by reading only O(k/log n) bits from the interaction transcript. Furthermore, for a natural class of k-round interactive proofs that are ""interactively reducible,"" we show a k-round public-coin IOP in which the verifier reads a constant number of bits from the transcript. This class contains the k-variate sumcheck protocol and, for k=poly(n), contains Shamir's protocol for PSPACE, thereby showing variants of these protocols in which the verifier has a constant bit-query complexity.
+
+As a corollary of these results, we show IOP-to-IOP transformations that previously were known to hold only for IPs, and get a new hardness of approximation result for stochastic constraint satisfaction problems.
+
+Based on joint work with Alessandro Chiesa and Eylon Yogev.
+
+==================================
+
+Iftach Haitner
+
+Lower Bound on SNARGs in the Random Oracle Model	
+
+Succinct non-interactive arguments (SNARGs) have become a fundamental primitive in the cryptographic community. The focus of this work is constructions of SNARGs in the Random Oracle Model (ROM). Such SNARGs enjoy post-quantum security and can be deployed using lightweight cryptography to instantiate the random oracle heuristically. A ROM-SNARG is \emph{(t,ε)-sound} if no t-query malicious prover can convince the verifier to accept a false statement with a probability larger than ε. Recently, Chiesa-Yogev (CRYPTO '21) presented a ROM-SNARG of length Θ(log(t/ε)⋅log t) (ignoring log n factors, for n being the instance size). This improvement, however, is still far from the (folklore) lower bound of Ω(log(t/ε)).
+
+Assuming the \textit{randomized exponential-time hypothesis}, we prove a tight lower bound of Ω(log(t/ε)⋅log t) for the length of {(t,ε)-sound} ROM-SNARGs. Our lower bound holds for constructions with non-adaptive verifiers and strong soundness notion called \textit{salted soundness}, restrictions that hold for \emph{all} known constructions (ignoring contrived counterexamples). We prove our lower bound by transforming any short ROM-SNARG (of the considered family) into the same length ROM-SNARG in which the verifier asks only a \emph{few} oracles queries, and then apply the recent lower bound of Chiesa-Yogev (TCC '20) for such SNARGs.
+
+Joint work with Daniel Nukrai and Eylon Yogev
+
+==================================
+
+Irit Dinur
+
+PCPs, LTCs, and high dim expanders	
+
+High dimensional expanders are a relatively recent generalization of expander graphs. 
+These objects might be related to probabilistically checkable proofs (PCPs), but are they? 
+
+A possible indication in this direction is a recent new construction of locally testable codes with optimal parameters (constant rate distance and locality) that is based on certain high dim expanders.
+
+I will give an introduction to high dimensional expanders, survey some known results, and discuss some open directions of research.
+
+==================================
+
+Jonathan Bootle
+
+Elastic SNARKs for Diverse Environments	
+
+Abstract: TBD
+==================================
+
+Leo Reyzin
+
+Compact Certificates of Collective Knowledge	
+
+We introduce compact certificate schemes, which allow any party to take a large number of signatures on a message M, by many signers of different weights, and compress them to a much shorter certificate. This certificate convinces the verifiers that signers with sufficient total weight signed M, even though the verifier will not see--let alone verify--all of the signatures. Thus, for example, a compact certificate can be used to prove that parties who jointly have a sufficient total account balance have
+attested to a given block in a blockchain.
+
+More generally, compact certificates can be used to prove that multiple parties together possess sufficiently weighty witnesses to a number of NP statements.
+
+After defining compact certificates, we demonstrate an efficient compact certificate scheme. We then show how to implement such a scheme in a decentralized setting over an unreliable network and in the presence of adversarial parties who wish to disrupt certificate creation.
+
+Joint work Silvio Micali, Georgios Vlachos, Riad S. Wahby, and Nickolai Zeldovich.
+https://eprint.iacr.org/2020/1568 and IEEE S&P 2021
+
+==================================
+
+Mor Weiss
+
+Your Reputation's Safe with Me: Framing-Free Distributed Zero-Knowledge Proofs	
+
+Distributed Zero-Knowledge (dZK) proofs allow a prover to prove statements of the form ""x is in L"" for an NP language L to a set of verifiers, without revealing anything except the validity of the statement. Interestingly, this can be done even when x is distributed between the verifiers, and no verifier knows the entire x. dZK proofs are useful building blocks in designing secure cryptographic protocols. However, existing dZK proofs suffer from a severe limitation: corrupted verifiers can ""frame"" an honest prover, causing verification of a true claim to fail. In this talk I will present a novel construction of ""framing-free"" dZK proofs in which honest provers cannot be framed.
+
+Based on joint work with Carmi Hazay and Muthuramakrishnan Venkitasubramaniam.
+
+==================================
+
+
+Muthu	Venkitasubramaniam
+
+Black-box constructions of complexity-preserving sublinear (ZK) arguments from symmetric primitives
+
+Abstract: TBD
+==================================
+
+Nick Spooner
+
+Efficient zero knowledge proofs for disjunctions
+
+Abstract: TBD
+==================================	
+
+Noga Ron-Zewi
+
+Highly-efficient Interactive Oracle Proofs & Cryptographic Applications	
+
+Interactive oracle proofs (IOPs) extend the classic notion of probabilistically-checkable proofs (PCPs) by allowing a verifier to interact with a prover over a small number of rounds, while querying the prover’s messages in only a few locations.
+
+A recent line of work gave highly-efficient IOPs bypassing state-of-the-art PCPs, for example, constant-round and constant-query IOPs with only a linear (and even approaching the witness length) amount of communication, as well as IOPs with linear-time prover complexity. These constructions were leveraged in turn to obtain highly-efficient succinct arguments and zero-knowledge proofs.
+
+The improved efficiency was obtained by replacing polynomial-based codes, commonly used in such proof systems, with more efficient (tensor-based) codes. In particular, these constructions bypassed a barrier imposed by the need to encode the computation using a multiplication code.
+
+In the talk I will survey these highly-efficient IOP constructions, and their cryptographic applications.
+
+Based on Joint works with Ron Rothblum.
+
+==================================
+
+Omer Paneth
+
+Incrementally Verifiable Computation, Mergeable Delegation, and Batch Arguments
+
+Abstract: TBD
+
+==================================	
+
+Rachel Zhang
+
+Fiat-Shamir and SNARGs for Sum-Check
+
+The Fiat-Shamir heuristic converts interactive proofs/arguments into non-interactive arguments. In particular, starting with a succinct proof, Fiat-Shamir yields succinct non-interactive arguments (SNARGs), which find applications in cryptocurrencies. However, despite being provably secure in the random oracle model, the Fiat-Shamir paradigm is known to be insecure with respect to any explicit hash function, at least for a particular interactive argument. The question is then which interactive proofs and hash functions can Fiat-Shamir be proven secure for.
+
+In this talk, we apply Fiat-Shamir paradigm to the sum-check protocol with a hash function by Peikert and Shiehian (CRYPTO 2019) and prove its soundness, thereby obtaining SNARGs from sub-exponential LWE. 
+
+Based on joint work with Ruta Jawale, Yael Kalai, and Dakshita Khurana.
+
+==================================
+
+Shafik Nassar
+
+Succinct Interactive Oracle Proofs: Applications and Limitations
+
+Abstract: TBD
+
+==================================
+	
+Tal Herman
+
+Verifying the Unseen - interactive proofs for label invariant distribution properties
+
+Given i.i.d. samples from an unknown distribution over a large domain [𝑁 ], approximating several basic quantities, including the distribution’s support size, its entropy, and its distance from the uniform distribution, requires Θ (𝑁 /log 𝑁 ) samples [Valiant and Valiant, STOC 2011].
+Suppose, however, that we can interact with a powerful but untrusted prover, who knows the entire distribution (or a good approximation of it). Can we use such a prover to approximate (or rather, to approximately verify) such statistical quantities more efficiently? We show that this is indeed the case: the support size, the entropy, and the distance from the uniform distribution, can all be approximately verified via a 2-message interactive proof, where the communication complexity, the verifier’s running time, and the sample complexity are 𝑂(\sqrt(N)) . For all these quantities, the sample
+complexity is tight up to polylog𝑁 factors (for any interactive proof, regardless of its communication complexity or verification time).
+More generally, we give a tolerant interactive proof system with the above sample and communication complexities for verifying a distribution’s proximity to any label-invariant property (any property that is invariant to re-labeling of the elements in the distribution’s support). The verifier’s running time in this more general protocol is also O(\sqrt(N)) under a mild assumption about the complexity of deciding, given a compact representation of a distribution, whether it is in the property or far from it.
+
+==================================
+
+Yael Kalai
+
+Delegating Computation: Simple at Last!	
+
+Abstract: TBD
+
+==================================
