@@ -39,7 +39,27 @@ I will give an introduction to high dimensional expanders, survey some known res
 
 ==================================
 
+Dan Carmon
+
+Proximity gaps for Reed-Solomon codes
+
+A collection of sets displays a proximity gap with respect to a code if for every set in the collection, either (i) all members of the set are within a certain relative Hamming distance from the code, or (ii) only a tiny fraction of the set’s members are within that distance close to the code. In particular, no set in the collection has roughly half of its members close to the code and the others far from it.
+
+In this talk we will present the result that the collection of affine spaces displays a proximity gap with respect to Reed-Solomon codes, even over relatively small field sizes, for any distance smaller than the Johnson/Gurusawmi-Sudan list-decoding radius. We will also discuss an application of the result to the soundness of the FRI proof protocol, provide a sketch of the proof method.
+
+Joint work with Eli Ben-Sasson, Yuval Ishai, Swastik Koppraty and Shubhangi Saraf.
+
+==================================
+
 Jonathan Bootle
+Proximity gaps for Reed-Solomon codes
+
+Abstract:
+A collection of sets displays a proximity gap with respect to a code if for every set in the collection, either (i) all members of the set are within a certain relative Hamming distance from the code, or (ii) only a tiny fraction of the set’s members are within that distance close to the code. In particular, no set in the collection has roughly half of its members close to the code and the others far from it.
+
+In this talk we will present the result that the collection of affine spaces displays a proximity gap with respect to Reed-Solomon codes, even over relatively small field sizes, for any distance smaller than the Johnson/Gurusawmi-Sudan list-decoding radius. We will also discuss an application of the result to the soundness of the FRI proof protocol, provide a sketch of the proof method.
+
+Joint work with Eli Ben-Sasson, Yuval Ishai, Swastik Koppraty and Shubhangi Saraf.
 
 Elastic SNARKs for Diverse Environments	
 
